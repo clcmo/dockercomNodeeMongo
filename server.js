@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 app.listen(3000, ()=>{
-    console.log("Abriu a porteira");
+    console.log("Abriu a porteira. Servidor rodando na porta 3000");
 });
 
 // Assim que avançarmos com MongoDB, isso aqui será a conexão
