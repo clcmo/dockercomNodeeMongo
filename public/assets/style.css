@@ -1,0 +1,230 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+
+/* --- Variáveis de Cores e Fontes --- */
+:root {
+    --cor-rosa: #FF69B4;
+    --cor-verde: #00FF7F;
+    --cor-azul: #00BFFF;
+    --cor-branca: #FFFFFF;
+    --cor-preta: #000000;
+}
+
+/* --- Estilos Globais e do Corpo --- */
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-branca);
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    color: var(--cor-preta);
+}
+
+/* --- Seção Principal (Hero) --- */
+.hero.is-superpoderosas {
+    background-color: var(--cor-rosa);
+    background-image: linear-gradient(135deg, var(--cor-rosa) 0%, var(--cor-azul) 50%, var(--cor-verde) 100%);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 8px solid var(--cor-preta);
+}
+
+/* --- Títulos --- */
+.title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3.5rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0 var(--cor-preta);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 0 var(--cor-preta);
+}
+
+/* --- Estilos da Seção de Personagens --- */
+.section-personagens {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.columns.is-centered {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.column {
+    margin: 10px;
+    max-width: 250px;
+}
+
+/* --- Estilos dos Cartões (Cards) --- */
+.card {
+    border: 5px solid var(--cor-preta);
+    box-shadow: 10px 10px 0 var(--cor-preta);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 15px 15px 0 var(--cor-preta);
+}
+
+.card-image img {
+    border-bottom: 5px solid var(--cor-preta);
+}
+
+.card-content {
+    background-color: var(--cor-branca);
+    padding: 20px;
+}
+
+.card-content .title {
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow: none;
+}
+
+/* --- Cores dos Nomes das Personagens --- */
+.card-content .blossom {
+    color: var(--cor-rosa);
+}
+
+.card-content .bubbles {
+    color: var(--cor-azul);
+}
+
+.card-content .buttercup {
+    color: var(--cor-verde);
+}
+
+/* --- Responsividade para Telas Menores --- */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    .subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+:root {
+    --cor-rosa: #FF69B4;
+    --cor-verde: #00FF7F;
+    --cor-azul: #00BFFF;
+    --cor-branca: #FFFFFF;
+    --cor-preta: #000000;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-branca);
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    color: var(--cor-preta);
+}
+
+/* --- Cabeçalho --- */
+.cabecalho {
+    background-color: var(--cor-rosa);
+    background-image: linear-gradient(135deg, var(--cor-rosa) 0%, var(--cor-azul) 50%, var(--cor-verde) 100%);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 8px solid var(--cor-preta);
+}
+
+.cabecalho h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0 var(--cor-preta);
+}
+
+.cabecalho p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 0 var(--cor-preta);
+}
+
+/* --- Estilos do Conteúdo Principal --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.personagens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.personagem-card {
+    border: 5px solid var(--cor-preta);
+    box-shadow: 10px 10px 0 var(--cor-preta);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background-color: var(--cor-branca);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.personagem-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 15px 15px 0 var(--cor-preta);
+}
+
+.personagem-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--cor-preta);
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.personagem-card h2 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2rem;
+    margin: 0;
+    text-shadow: 2px 2px 0 var(--cor-preta);
+}
+
+.personagem-card .blossom-cor {
+    color: var(--cor-rosa);
+}
+
+.personagem-card .bubbles-cor {
+    color: var(--cor-azul);
+}
+
+.personagem-card .buttercup-cor {
+    color: var(--cor-verde);
+}
+
+.personagem-card p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .cabecalho h1 {
+        font-size: 2.5rem;
+    }
+    .cabecalho p {
+        font-size: 1.2rem;
+    }
+}

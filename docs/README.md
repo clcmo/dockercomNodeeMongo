@@ -8,4 +8,4 @@ Tentem executar, via Docker o projeto com os seguintes comandos
 
 * `docker build -t meuprojeto .`
 * `docker rm -f meuprojeto-container`
-* `docker run -d -p 3000:30 --name meuprojeto-container meuprojeto` 
+* `docker run -d -p 8000:8000 --name meuprojeto-container meuprojeto` 

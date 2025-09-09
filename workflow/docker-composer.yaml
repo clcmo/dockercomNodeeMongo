@@ -1,1 +1,28 @@
-//Conteudo do Docker Composer
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest # ou a versão desejada
+    container_name: mongodb-container
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db # Volume para persistir os dados
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin # Opcional: para criar um root user
+      - MONGO_INITDB_ROOT_PASSWORD=password # Opcional: para criar um root user
+
+  app:
+    build: . # Se você tiver um Dockerfile na raiz do projeto
+    container_name: nodejs-app-container
+    ports:
+      - "8000:8000" # Porta da sua aplicação Node.js
+    volumes:
+      - .:/app # Mapeia o código do host para o contêiner para desenvolvimento
+    environment:
+      - MONGO_URL=mongodb://mongo:27017 # Conecta-se ao serviço 'mongo'
+    depends_on:
+      - mongo # Garante que o MongoDB seja iniciado antes do app
+
+volumes:
+  mongo-data:
